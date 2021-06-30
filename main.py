@@ -10,6 +10,6 @@ if not os.path.exists(loc2):
 
 for filename in os.listdir(loc1):
     if filename.endswith(".jpg") or filename.endswith(".png"):
-        new_file: str = filename[:-3:] + 'png'
         img = Image.open(f'{loc1}{filename}')
-        img.save(f'{loc2}{new_file}', 'png')
+        new_file = os.path.splitext(filename)[0]
+        img.save(f'{loc2}{new_file}.png', 'png')
