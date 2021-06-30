@@ -8,3 +8,5 @@ And the name of the folder where to store the PNG format images.
 For example:-
 
 ->python input_folder/ output_folder/
+
+(works in terminal)
