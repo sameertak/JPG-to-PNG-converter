@@ -1,12 +1,13 @@
-#Works in the Terminal
-import sys
 from PIL import Image
 import os
 
-loc1 = sys.argv[1]      #Name of the folder - 'folder_name/'    (where jpg images are being stored)
-loc2 = sys.argv[2]      #Name of the folder - 'folder_name/'    (where png images are going to be stored)
+loc1 = input('Name of the Folder where png images are stored: ')
+loc2 = input('Name of the Output Folder: ')
 
-if not os.path.exists(loc2):    #If folder doesn't exists, it'll create a new.
+loc1 = loc1 + '/'
+loc2 = loc2 + '/'
+
+if not os.path.exists(loc2):
     os.makedirs(loc2)
 
 for filename in os.listdir(loc1):
